@@ -138,3 +138,26 @@ html, body {
     user-select:none;
 }
 
+
+.screenshot {
+    position: absolute;
+    left:0;
+    top:0;
+    -webkit-transform:scale(.5);
+}
+
+.tile {
+    position: absolute;
+    left:-850px;
+    top:-256px;
+    -webkit-transform:scale(.15);  
+}
+
+.Main-canvas {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 9;
+}

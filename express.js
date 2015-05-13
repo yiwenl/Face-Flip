@@ -149,6 +149,30 @@ var EXPRESS = (function() {
         res.sendFile(users[req.query.id]['data']['posterPath']);
     });
 
+
+    /*-------------------*/
+    //  3D
+    /*-------------------*/
+    app.get('/bongiovi-min.js', function(req, res, next) {
+        res.sendFile(__dirname + '/js/bongiovi-min.js');
+    });
+
+    app.get('/Tween.js', function(req, res, next) {
+        res.sendFile(__dirname + '/js/Tween.js');
+    });
+
+    app.get('/Spin.js', function(req, res, next) {
+        res.sendFile(__dirname + '/js/Spin.js');
+    });
+
+    app.get('/shaders/spin.vert', function(req, res, next) {
+        res.sendFile(__dirname + '/shaders/spin.vert');
+    });
+
+    app.get('/shaders/spin.frag', function(req, res, next) {
+        res.sendFile(__dirname + '/shaders/spin.frag');
+    });
+
 })();
 
 module.exports = EXPRESS;
