@@ -1,0 +1,22 @@
+{
+    "name": "node-server",
+    "version": "0.0.1",
+    "description": "",
+    "main": "",
+    "author": "samelie",
+    "devDependencies": {
+        "q": "latest",
+        "express": "latest",
+        "request": "latest",
+        "ect": "latest",
+        "lodash": "latest",
+        "socket.io": "latest",
+        "cors": "*",
+        "ip": "latest",
+        "fluent-ffmpeg": "latest",
+        "ws": "latest",
+        "body-parser": "latest",
+        "connect-busboy": "latest",
+        "fs.extra": "latest"
+    }
+}

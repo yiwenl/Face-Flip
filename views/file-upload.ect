@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui">
+    <title>FileUpload</title>
+    <link href="file-upload.css" rel="stylesheet">
+  </head>
+  <body>
+  	<div id="fileUpload" class="Main">
+      <div class="Timer"></div>
+      <div id="fileUpload" class="FileUpload">TAP THIS TO UPLOAD A VIDEO</div>
+      <input id='fileInput' type='file' accept="video/*" capture="camera">
+      <div class="Keyword">
+        <video id="myVideo" autoplay controls>
+          <source type="video/mp4"/>
+        </video>
+      </div>
+  		<div class="Response"></div>
+    </div>
+  </body>
+
+  <script src="socket.io.js"></script>
+  <script src="file-upload.js"></script>
+</html>

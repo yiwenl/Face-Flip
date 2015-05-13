@@ -1,0 +1,90 @@
+*.py[cod]
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.egg
+*.egg-info
+dist
+eggs
+.eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib64
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+pip-log.txt
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+
+# Unit test / coverage reports
+######################
+.coverage
+.tox
+nosetests.xml
+htmlcov
+
+# Translations
+######################
+*.mo
+
+# Eclipse
+######################
+.project
+.pydevproject
+
+# Complexity
+######################
+output/*.html
+output/*/index.html
+
+# Sphinx
+######################
+docs/_build
+
+# Intelij
+######################
+.idea
+
+#Frontend
+build/assets/js/bundle.js
+build/assets/js/templates.js
+
+node_modules
+videos/**/*
