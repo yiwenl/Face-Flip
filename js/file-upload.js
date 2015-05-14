@@ -88,10 +88,14 @@ function FileUpload() {
 
 var video;
 var screenshots = [];
-var _interval
+var frameIndex = 0;
+var _interval;
 function onVideoData() {
+    var textEl = document.querySelector('.FileUpload');
+    textEl.innerHTML = "Processing ... "
     video = document.getElementById('myVideo');
-    video.style.opacity = .1;
+    video = document.querySelector("#myVideo");
+    console.log('Video : ', video);
     video.load();
     video.addEventListener("loadedmetadata", onMetaData);
 }
@@ -103,24 +107,30 @@ function onMetaData() {
 
     // getScreenshot();
 
-    window.addEventListener("touchstart", startScreenshot);
-    window.addEventListener("mousedown", startScreenshot);
+    // window.addEventListener("touchstart", startScreenshot);
+    // window.addEventListener("mousedown", startScreenshot);
+
+    startScreenshot();
 }
 
 
 function startScreenshot() {
     if(_interval != undefined) return;
 
-    video.play();
+    // video.play();
     // video.style.display = "none";
     console.log("Start getting Screenshots");
     screenshots = [];
-    var interval = (video.duration * 1000 - 10) / 18;
+    var interval = (video.duration * 1000) / 18;
     _interval = setInterval(getScreenshot, interval);
 }
 
 
 function getScreenshot() {
+    var seekTime = video.duration/18 * frameIndex;
+    // console.log("Seek Time : ", seekTime);
+    // video.seek(seekTime);
+    video.currentTime = seekTime;
     var canvas = document.createElement("canvas");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
@@ -136,8 +146,9 @@ function getScreenshot() {
     screenshots.push(canvas);
 
     // document.body.appendChild(canvas);
+    // console.log(screenshots.length, canvas);
 
-    console.log(screenshots.length, canvas);
+    frameIndex++;
 
     if(screenshots.length == 18) {
         window.removeEventListener("touchstart", startScreenshot);
@@ -168,8 +179,8 @@ function generateTiles() {
         
         captures.push(canvas);
         canvas.className = "tile";
-        document.body.appendChild(canvas);
-        console.log(canvas);
+        // document.body.appendChild(canvas);
+        // console.log(canvas);
     }
 
     // this.video.classList.add("hide");

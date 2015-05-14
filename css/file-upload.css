@@ -54,6 +54,10 @@ html, body {
     width: 100%;
     font-family: 'Arial Rounded MT Bold' sans-serif;
     background-color: #333;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
 }
 .Main{
 	position: relative;
@@ -69,13 +73,10 @@ html, body {
     right: 0;
     color: #fbf1ea;
     letter-spacing: 4px;
-    font-size: 45px;
+    font-size: 40px;
     width: 90%;
     margin: auto;
-    padding-bottom: 20px;
-
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-
+    line-height: 60px;
 }
 
 #fileInput{
@@ -160,4 +161,11 @@ html, body {
     width:100%;
     height:100%;
     z-index: 9;
+}
+
+#myVideo {
+    display:none;
+    pointer-events:none;
+    position: absolute;
+    margin-left:-99999px;
 }
