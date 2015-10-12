@@ -16,10 +16,6 @@ html {
 	text-size-adjust: none;
 }
 
-h1,h2,h3,h4,text,p {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-webkit-font-smoothing: antialiased;
-}
 
 .Main-Canvas {
 	width:100%;
@@ -27,4 +23,38 @@ h1,h2,h3,h4,text,p {
 	top:0px;
 	left:0px;
 	position: absolute;
+}
+
+
+video {
+	position: absolute;
+	width:640px;
+	height:480px;
+	left:50%;
+	top:50%;
+
+	margin-left:-320px;
+	margin-top:-240px;
+
+	transition: all .5s ease-out;
+
+	&.hide {
+		opacity: 0;
+	}
+}
+
+.desc {
+	position: absolute;
+	bottom: 10px;
+	color:white;
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+	width: 100%;
+	letter-spacing: 2px;
+	transition : opacity .5s ease-out;
+
+	&.hide {
+		opacity: 0;
+	}
 }
